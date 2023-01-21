@@ -39,4 +39,34 @@ Console.Clear();
 
 //Console.WriteLine(otvet);
 
-//if otvet ()
+//1. По двум заданным числам проверять является ли первое квадратом второго
+if (otvet == 1)
+  {
+    int a,b;
+    Console.Write("Введите первое число: ");
+    a = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите второе число: ");
+    b = Convert.ToInt32(Console.ReadLine());
+
+    if (Math.Sqrt(a) == b)
+      {
+        Console.WriteLine("Первое число является квадратом второго!");
+      }
+      else
+      {
+        if (Math.Sqrt(b) == a)
+        {
+          Console.WriteLine("Пeрвое число не является квадратом второго, а вот второе число является квадратов первого!");
+        }
+        else
+        {
+          Console.WriteLine("Первое число не является квадратом второго!");
+        }
+      }
+  }
+
+Console.Write(" Press <Enter> to exit... ");
+    while (Console.ReadKey().Key != ConsoleKey.Enter) {}
+
+
+Console.WriteLine(" ");
