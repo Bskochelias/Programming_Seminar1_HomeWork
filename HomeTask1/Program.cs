@@ -69,24 +69,44 @@ do
             Console.WriteLine("Первое число не является квадратом второго!");
           }
         }
-    }
+      }
 
 //2. По заданному номеру дня недели вывести его название
- //   if (otvet == 2)
- //   {
- //     int a1;
- //     Console.Write("Введите число: ");
- //     a = Convert.ToInt32(Console.ReadLine());
- //     switch (a1)
- //     {
- //       Case 1:
- //         Console.Write("Понедельник");
- //         break;
- //       Case 2:
- //         Console.Write("Понедельник");
- //         break;
- //     }
- //   }
+      if (otvet == 2)
+      {
+         int a1;
+         Console.Write("Введите число недели: ");
+         a1 = Convert.ToInt32(Console.ReadLine());
+         switch (a1)
+         {
+              case 1:
+                Console.WriteLine("Понедельник");
+                break;
+              case 2:
+                Console.WriteLine("Вторник");
+                break;
+              case 3:
+                Console.Write("Среда");
+                break;
+              case 4:
+                Console.WriteLine("Четверг");
+                break;
+              case 5:
+                Console.WriteLine("Пятница");
+                break;
+              case 6:
+                Console.WriteLine("Суббота");
+                break;
+              case 7:
+                Console.WriteLine("Воскресенье");
+                break;
+              default:
+                Console.WriteLine("Неправильное значение! По пробуйте снова!");
+                break;                         
+         }
+      }
+//3. Выяснить является ли введенное число чётным"
+
 
   Console.Write(" Нажмите <Enter> для выхода... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
@@ -94,7 +114,7 @@ do
   Console.Clear();
 
  
-    Console.WriteLine("Вы хотите решить воспользоваться еще одним решением? Yes/No");
+    Console.WriteLine("Вы хотите воспользоваться еще одним решением? Yes/No");
     Console.WriteLine(" ");
     otvet2 = Console.ReadLine();
 
