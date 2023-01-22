@@ -183,6 +183,27 @@ do
 
       }
 
+//7. Найти третью цифру числа или сообщить, что её нет
+    if (otvet == 7)
+      {
+        int a7;
+        string s7;
+        
+        Console.Write("Введите число: ");
+        a7 = Convert.ToInt32(Console.ReadLine());
+        if (a7<0) {a7=-a7;}
+        
+        if (a7 > 99)
+        {
+          s7 = Convert.ToString(a7);
+          s7 = s7.Substring(2,1);
+          Console.WriteLine("Третий символ числа равен: " + s7);
+        }
+        else
+          Console.WriteLine("Третьего символа нету!");
+
+      }
+
   Console.Write(" Нажмите <Enter> для выхода... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
 
