@@ -12,10 +12,7 @@
 int otvet = 1;
 string otvet2 = " ";
 do
-
 {
-
-  
   do
   { 
     Console.Clear();
@@ -263,6 +260,27 @@ if (otvet == 9)
           Console.WriteLine($"После удаления получислось слудещее число: {s9}");
       }
 
+//10. Выяснить, кратно ли число заданному, если нет, вывести остаток.
+      if (otvet == 10)
+      {
+         int a10, b10;
+         
+         Console.Write("Введите число: ");
+         a10 = Convert.ToInt32(Console.ReadLine());
+         Console.Write("Введите кратное число: ");
+         b10 = Convert.ToInt32(Console.ReadLine());
+        if (a10%b10 == 0) 
+            {
+              Console.WriteLine($"Число {a10} кратное числу {b10}!");
+
+            }
+          else
+          {
+              Console.WriteLine("Целое число от деление равно: "+(a10-(a10%b10))/b10 + ". Остаток от деление равно:" + a10%b10);
+          }
+          
+      
+      }
 
   Console.Write(" Нажмите <Enter> для выхода... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
