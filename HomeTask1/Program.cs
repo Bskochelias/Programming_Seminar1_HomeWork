@@ -152,10 +152,12 @@ do
           do
           {
             Console.Clear();
-            Console.Write("Введите число до которого будут выходить четные числа: ");
+            Console.Write("Введите трехзначное число: ");
             a5 = Convert.ToInt32(Console.ReadLine());
 
-            if (+a5 < 99 ^ +a5 > 1000 )  
+            if (a5<0) {a5=-a5;}
+
+            if (a5 < 99 ^ a5 > 1000 )  
               {
                 Console.WriteLine("Ваше число не трехзначное.");
             
@@ -163,7 +165,7 @@ do
                 while (Console.ReadKey().Key != ConsoleKey.Enter) {}
               }
 
-          } while (+a5 > 99 ^ +a5 < 1000);
+          } while (a5 > 99 ^ a5 < 1000);
           
           Console.Write("Вторая цифра трех значного числа равна: ");
           s5 = Convert.ToString(a5);
