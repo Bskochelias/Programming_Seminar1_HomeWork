@@ -106,7 +106,22 @@ do
          }
       }
 //3. Выяснить является ли введенное число чётным"
+      if (otvet == 3)
+      {
+         int a3;
+         Console.Write("Введите число для проверки четности: ");
+         a3 = Convert.ToInt32(Console.ReadLine());
+         if (a3 % 2 == 0)
+          {
+            Console.WriteLine("Введенное число четное.");
+          } 
+          else
+          {
+            Console.WriteLine("Введенное число нечетное.");
+          }
 
+
+      }
 
   Console.Write(" Нажмите <Enter> для выхода... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
