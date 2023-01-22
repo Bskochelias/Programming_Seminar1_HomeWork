@@ -119,9 +119,32 @@ do
           {
             Console.WriteLine("Введенное число нечетное.");
           }
-
-
       }
+//4. Показать четные числа от 1 до N
+      if (otvet == 4)
+      {
+         int a4, i4=2;
+         Console.Write("Введите число до которого будут выходить четные числа: ");
+         a4 = Convert.ToInt32(Console.ReadLine());
+        if (a4 % 2 == 0)
+          {
+            while (i4 < a4+2)
+              {
+                Console.WriteLine(i4);
+                i4=i4+2;
+              }
+          } 
+          else
+          {
+            while (i4 < a4)
+              {
+                Console.WriteLine(i4);
+                i4=i4+2;
+              }
+          }
+      }
+
+//
 
   Console.Write(" Нажмите <Enter> для выхода... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
@@ -134,7 +157,7 @@ do
     otvet2 = Console.ReadLine();
 
 }
-while (otvet2 != "No" & otvet2 != "no" & otvet2 != "NO");
+while (otvet2 != "No" & otvet2 != "no" & otvet2 != "NO" & otvet2 !="n" & otvet2 !="N");
 
 Console.Clear();
 
