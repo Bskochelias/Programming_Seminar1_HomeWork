@@ -204,6 +204,35 @@ do
 
       }
 
+//8. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа")
+    if (otvet == 8)
+      {
+        int   a8, i8 = 1 , izv,
+              min8, max8,
+              max_chislo;
+        string s8;
+        
+        Console.WriteLine("Выберите отрезок рандомного числа!");
+        Console.Write("Введите минимальное число рандома: ");
+        min8 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите максимальное число рандома: ");
+        max8 = Convert.ToInt32(Console.ReadLine());
+
+        a8 = new Random().Next( min8, max8);
+        Console.WriteLine($"Случайное число равно: {a8}");
+        if (a8<0) {a8=-a8;}
+        s8 = Convert.ToString(a8);
+
+        max_chislo = Convert.ToInt32(s8.Substring(0,1));
+        while (i8 < s8.Length)
+        {
+            izv = Convert.ToInt32(s8.Substring(i8,1));
+            if (max_chislo < izv) max_chislo = izv;
+            i8++;
+        }
+        Console.WriteLine("Наибольшое цифра случайного числа из диапазона (" + min8 + " , "+ max8 + ") равна:"+ max_chislo);
+
+      }
   Console.Write(" Нажмите <Enter> для выхода... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
 
