@@ -231,8 +231,39 @@ do
             i8++;
         }
         Console.WriteLine("Наибольшое цифра случайного числа из диапазона (" + min8 + " , "+ max8 + ") равна:"+ max_chislo);
-
       }
+
+//9. Удалить вторую цифру трёхзначного числа
+if (otvet == 9)
+      {
+         int a9, minus=0;
+         string s9;
+          do
+          {
+            Console.Clear();
+            Console.Write("Введите трехзначное число для удаления второй цифры: ");
+            a9 = Convert.ToInt32(Console.ReadLine());
+
+            if (a9<0) {a9=-a9; minus=1;}
+
+            if (a9 < 99 ^ a9 > 1000 )  
+              {
+                Console.WriteLine("Ваше число не трехзначное.");
+            
+                Console.Write(" Нажмите <Enter> для выхода... ");
+                while (Console.ReadKey().Key != ConsoleKey.Enter) {}
+              }
+
+          } while (a9 > 99 ^ a9 < 1000);
+          
+          
+          s9 = Convert.ToString(a9);
+          s9 = s9.Substring(0,1)+s9.Substring(2,1);
+          if (minus == 1) s9 = "-"+s9;
+          Console.WriteLine($"После удаления получислось слудещее число: {s9}");
+      }
+
+
   Console.Write(" Нажмите <Enter> для выхода... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
 
