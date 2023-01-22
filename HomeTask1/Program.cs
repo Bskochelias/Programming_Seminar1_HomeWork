@@ -144,7 +144,32 @@ do
           }
       }
 
-//
+//5. Показать вторую цифру трёхзначного числа
+      if (otvet == 5)
+      {
+         int a5;
+         string s5;
+          do
+          {
+            Console.Clear();
+            Console.Write("Введите число до которого будут выходить четные числа: ");
+            a5 = Convert.ToInt32(Console.ReadLine());
+
+            if (+a5 < 99 ^ +a5 > 1000 )  
+              {
+                Console.WriteLine("Ваше число не трехзначное.");
+            
+                Console.Write(" Нажмите <Enter> для выхода... ");
+                while (Console.ReadKey().Key != ConsoleKey.Enter) {}
+              }
+
+          } while (+a5 > 99 ^ +a5 < 1000);
+          
+          Console.Write("Вторая цифра трех значного числа равна: ");
+          s5 = Convert.ToString(a5);
+          s5 = s5.Substring(1,1);
+          Console.WriteLine(s5);
+      }
 
   Console.Write(" Нажмите <Enter> для выхода... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
