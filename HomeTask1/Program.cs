@@ -173,6 +173,16 @@ do
           Console.WriteLine(s5);
       }
 
+//6. Показать последнюю цифру трёхзначного числа
+    if (otvet == 6)
+      {
+         string a6;
+         Console.Write("Введите число в котором нужно показать последнию цифру:");
+         a6 = Console.ReadLine();
+        Console.WriteLine("Последния цифра равна: " + a6.Substring(a6.Length - 1,1));
+
+      }
+
   Console.Write(" Нажмите <Enter> для выхода... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
 
